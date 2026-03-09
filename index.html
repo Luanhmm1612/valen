@@ -150,10 +150,12 @@ body {
 
 <!-- HEARTS -->
 <script>
-for (let i = 0; i < 16; i++) {
+const hearts = ["💗","💖","💘","💕"];
+
+for (let i = 0; i < 30; i++) {
   const h = document.createElement("div");
   h.className = "heart";
-  h.innerHTML = "💗";
+  h.innerHTML = hearts[Math.floor(Math.random()*hearts.length)];
   h.style.left = Math.random()*100 + "vw";
   h.style.top = Math.random()*100 + "vh";
   document.body.appendChild(h);
@@ -237,6 +239,7 @@ function openLetter() {
 
 </body>
 </html>
+
 
 
 
